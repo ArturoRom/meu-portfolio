@@ -1,0 +1,25 @@
+// SASS
+a {
+  display: block;
+  background: #e5e5e5;
+  border: 1px solid #999;
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 20px;
+
+  h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  p {
+    color: #333;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  p:first-of-type {
+    margin-bottom: 20px;
+  }
+}
