@@ -1,5 +1,5 @@
 {
-  "name": "meu-portfolio",
+  "name": "intagram",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,16 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.3.2",
-    "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
-    "eslint": "8.43.0",
-    "eslint-config-next": "13.4.7",
-    "next": "13.4.7",
+    "@types/node": "20.4.2",
+    "@types/react": "18.2.15",
+    "@types/react-dom": "18.2.7",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.11",
+    "next": "13.4.11",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.1.6",
-    "sass": "^1.63.6",
-    "jest": "^27.4.7"
+    "sass": "1.64.0"
   }
 }
