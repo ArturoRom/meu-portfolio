@@ -1,6 +1,8 @@
 import { stories } from "@/database/StoriesDatabase";
 import { UserStory } from "@/interface/UserStory";
+import { OnePost } from "@/database/PostDatabase";
 import Head from "next/head";
+ 
 
 export default function Home() {
   function renderizarItemDoStorie(item: UserStory) {
@@ -24,6 +26,14 @@ export default function Home() {
         <title>Instagram</title>
       </Head>
       <section>{stories.map((item) => renderizarItemDoStorie(item))}</section>
+   <hr ></hr>
+
+   <section className="post-section">
+    <div className="Post"></div>
+    <img src={OnePost.Photo} />
+    <p>{OnePost.Autor}</p>
+   </section>
+
     </>
   );
 }
