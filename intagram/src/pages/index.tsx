@@ -1,39 +1,29 @@
-import { stories } from "@/database/StoriesDatabase";
-import { UserStory } from "@/interface/UserStory";
-import { OnePost } from "@/database/PostDatabase";
+import { listaPost } from "@/database/PostDatabase";
 import Head from "next/head";
- 
+import { Post } from "@/interface/Post";
+import StoriesListComponent from "@/components/StoriesListComponent";
+import PostListComponent from "@/components/PostListComponent";
 
 export default function Home() {
-  function renderizarItemDoStorie(item: UserStory) {
-    // Operador ternário
-    const classes = item.haveBeenSeen ? "ativa" : "";
+  function adicionarPostagem() {
+    const postNovo: Post = {
+      Autor: "Eu",
+      Photo: "https://picsum.photos/506/506",
+      Text: "Texto",
+      likes: 0,
+    };
 
-    return (
-      <div className="item" key={item.id}>
-        <img className={classes} src={item.urlPhoto} alt="" />
-        <p>{item.userName}</p>
-      </div>
-    );
+    listaPost.push(postNovo);
   }
-
-  // Quero a listagem de postagem agora
-  // a postagem terá autor, foto, texto, quantidade de likes
-
   return (
     <>
       <Head>
         <title>Instagram</title>
       </Head>
-      <section>{stories.map((item) => renderizarItemDoStorie(item))}</section>
-   <hr ></hr>
-
-   <section className="post-section">
-    <div className="Post"></div>
-    <img src={OnePost.Photo} />
-    <p>{OnePost.Autor}</p>
-   </section>
-
+      <StoriesListComponent />
+      <hr></hr>
+      <button onClick={() => adicionarPostagem()}>Adicionar</button>
+      <PostListComponent />
     </>
   );
 }
